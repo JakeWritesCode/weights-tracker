@@ -6,7 +6,7 @@
 		PlusOutline,
 		ChevronRightOutline,
 		TrashBinSolid,
-		CopyOutline
+		FileCopyOutline
 	} from 'flowbite-svelte-icons';
 
 	let { data } = $props();
@@ -55,7 +55,7 @@
 							class="text-gray-500 hover:text-blue-400"
 							title="Clone week"
 						>
-							<CopyOutline class="h-4 w-4" />
+							<FileCopyOutline class="h-4 w-4" />
 						</button>
 					</form>
 					<form method="POST" action="?/deleteWeek" use:enhance>
