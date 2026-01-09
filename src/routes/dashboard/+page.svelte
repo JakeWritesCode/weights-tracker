@@ -8,7 +8,7 @@
 
 <div class="space-y-4 p-4">
 	<!-- Quick Start Card -->
-	<Card class="dark:bg-gray-800">
+	<Card class="px-4 py-2 dark:bg-gray-800">
 		<h2 class="mb-2 text-lg font-semibold text-white">Ready to train?</h2>
 		<p class="mb-4 text-gray-400">Start your next workout session</p>
 		<Button href="/workout" color="primary" class="w-full">
@@ -20,7 +20,7 @@
 	<!-- Recent Workouts -->
 	<div>
 		<h2 class="mb-3 text-lg font-semibold text-white">Recent Workouts</h2>
-		<Card class="dark:bg-gray-800">
+		<Card class="px-4 py-2 dark:bg-gray-800">
 			<p class="text-center text-gray-400">No workouts yet. Get started!</p>
 		</Card>
 	</div>
@@ -29,11 +29,11 @@
 	<div>
 		<h2 class="mb-3 text-lg font-semibold text-white">This Week</h2>
 		<div class="grid grid-cols-2 gap-3">
-			<Card class="dark:bg-gray-800">
+			<Card class="px-4 py-2 dark:bg-gray-800">
 				<p class="text-2xl font-bold text-white">0</p>
 				<p class="text-sm text-gray-400">Workouts</p>
 			</Card>
-			<Card class="dark:bg-gray-800">
+			<Card class="px-4 py-2 dark:bg-gray-800">
 				<p class="text-2xl font-bold text-white">0 kg</p>
 				<p class="text-sm text-gray-400">Volume</p>
 			</Card>

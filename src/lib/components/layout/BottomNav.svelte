@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { BottomNav, BottomNavItem } from 'flowbite-svelte';
 	import {
 		HomeSolid,
 		ClipboardListSolid,
@@ -23,26 +22,19 @@
 	}
 </script>
 
-<BottomNav
-	position="fixed"
-	navType="application"
-	classInner="grid-cols-4"
-	classOuter="dark:bg-gray-800 border-t border-gray-700"
->
-	{#each navItems as item}
-		{@const active = isActive(item.href, $page.url.pathname)}
-		<BottomNavItem
-			btnName={item.label}
-			href={item.href}
-			active={active}
-			activeClass="text-primary-500 dark:text-primary-400"
-			class="dark:hover:bg-gray-700"
-		>
-			<item.icon
-				class="mb-1 h-5 w-5 {active
-					? 'text-primary-500 dark:text-primary-400'
-					: 'text-gray-500 dark:text-gray-400'}"
-			/>
-		</BottomNavItem>
-	{/each}
-</BottomNav>
+<nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-700 bg-gray-800">
+	<div class="grid h-16 grid-cols-4">
+		{#each navItems as item}
+			{@const active = isActive(item.href, $page.url.pathname)}
+			<a
+				href={item.href}
+				class="flex flex-col items-center justify-center hover:bg-gray-700 {active
+					? 'text-primary-500'
+					: 'text-gray-400'}"
+			>
+				<item.icon class="h-5 w-5" />
+				<span class="mt-1 text-xs">{item.label}</span>
+			</a>
+		{/each}
+	</div>
+</nav>
