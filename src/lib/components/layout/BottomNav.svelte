@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import {
-		HomeSolid,
-		ClipboardListSolid,
-		FireSolid,
-		ClockSolid
+		HomeOutline,
+		ClipboardListOutline,
+		FireOutline,
+		ClockOutline
 	} from 'flowbite-svelte-icons';
 
 	const navItems = [
-		{ href: '/dashboard', label: 'Home', icon: HomeSolid },
-		{ href: '/plans', label: 'Plans', icon: ClipboardListSolid },
-		{ href: '/workout', label: 'Workout', icon: FireSolid },
-		{ href: '/history', label: 'History', icon: ClockSolid }
+		{ href: '/dashboard', label: 'Home', icon: HomeOutline },
+		{ href: '/plans', label: 'Plans', icon: ClipboardListOutline },
+		{ href: '/workout', label: 'Workout', icon: FireOutline },
+		{ href: '/history', label: 'History', icon: ClockOutline }
 	];
 
 	function isActive(href: string, pathname: string): boolean {
@@ -29,7 +29,7 @@
 			<a
 				href={item.href}
 				class="flex flex-col items-center justify-center hover:bg-gray-700 {active
-					? 'text-primary-500'
+					? 'text-blue-500'
 					: 'text-gray-400'}"
 			>
 				<item.icon class="h-5 w-5" />
