@@ -10,7 +10,9 @@ FROM node:22
 WORKDIR /app
 COPY --from=builder /app/build build/
 COPY --from=builder /app/node_modules node_modules/
+COPY --from=builder /app/prisma prisma/
+COPY --from=builder /app/src/generated src/generated/
 COPY package.json .
 EXPOSE 3000
 ENV NODE_ENV=production
-CMD [ "node", "build" ]
+CMD npx prisma migrate deploy && node build
