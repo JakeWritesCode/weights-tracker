@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package*.json .
 RUN npm ci
 COPY . .
+RUN npx svelte-kit sync
 RUN npx prisma generate
 RUN npm run build
 RUN npm prune --production
