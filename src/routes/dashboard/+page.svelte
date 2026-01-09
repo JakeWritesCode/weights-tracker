@@ -1,10 +1,22 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
 	import { Button, Card } from 'flowbite-svelte';
-	import { FireSolid } from 'flowbite-svelte-icons';
+	import { FireSolid, ArrowRightToBracketOutline } from 'flowbite-svelte-icons';
 </script>
 
-<PageHeader title="Dashboard" />
+<PageHeader title="Dashboard">
+	{#snippet action()}
+		<form method="POST" action="/logout" use:enhance>
+			<button
+				type="submit"
+				class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white"
+			>
+				<ArrowRightToBracketOutline class="h-5 w-5" />
+			</button>
+		</form>
+	{/snippet}
+</PageHeader>
 
 <div class="space-y-4 p-4">
 	<!-- Quick Start Card -->
